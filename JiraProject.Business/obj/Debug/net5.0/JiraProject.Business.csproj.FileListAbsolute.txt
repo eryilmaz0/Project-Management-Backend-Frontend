@@ -1,0 +1,17 @@
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\JiraProject.Business.deps.json
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\JiraProject.Business.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\ref\JiraProject.Business.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\JiraProject.Business.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.AssemblyInfoInputs.cache
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.AssemblyInfo.cs
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.csproj.CoreCompileInputs.cache
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\ref\JiraProject.Business.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\JiraProject.Entities.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\JiraProject.Entities.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.csproj.CopyComplete
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\JiraProject.DataAccess.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\bin\Debug\net5.0\JiraProject.DataAccess.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Business\obj\Debug\net5.0\JiraProject.Business.csproj.AssemblyReference.cache

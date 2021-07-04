@@ -1,0 +1,15 @@
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\bin\Debug\net5.0\JiraProject.DataAccess.deps.json
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\bin\Debug\net5.0\JiraProject.DataAccess.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\bin\Debug\net5.0\ref\JiraProject.DataAccess.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\bin\Debug\net5.0\JiraProject.DataAccess.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.AssemblyInfoInputs.cache
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.AssemblyInfo.cs
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\ref\JiraProject.DataAccess.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\bin\Debug\net5.0\JiraProject.Entities.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\bin\Debug\net5.0\JiraProject.Entities.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.csproj.CopyComplete
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.DataAccess\obj\Debug\net5.0\JiraProject.DataAccess.csproj.AssemblyReference.cache

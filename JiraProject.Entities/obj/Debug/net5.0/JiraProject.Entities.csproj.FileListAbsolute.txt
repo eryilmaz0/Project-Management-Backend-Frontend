@@ -1,0 +1,15 @@
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\bin\Debug\net5.0\JiraProject.Entities.deps.json
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\bin\Debug\net5.0\JiraProject.Entities.runtimeconfig.json
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\bin\Debug\net5.0\JiraProject.Entities.runtimeconfig.dev.json
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\bin\Debug\net5.0\JiraProject.Entities.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\bin\Debug\net5.0\ref\JiraProject.Entities.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\bin\Debug\net5.0\JiraProject.Entities.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.AssemblyInfoInputs.cache
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.AssemblyInfo.cs
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.csproj.CoreCompileInputs.cache
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\ref\JiraProject.Entities.dll
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.pdb
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.genruntimeconfig.cache
+C:\Users\eren_\Desktop\PROJELER\BootcampFinalJiraProject\JiraProject.Entities\obj\Debug\net5.0\JiraProject.Entities.csproj.AssemblyReference.cache
