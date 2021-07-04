@@ -150,7 +150,6 @@ namespace JiraProject.API.Controllers
 
 
 
-
         [HttpDelete]
         [Route("RemoveUser")]
         [Authorize(Roles = "Leader")]
@@ -166,7 +165,6 @@ namespace JiraProject.API.Controllers
 
             return BadRequest(result);
         }
-
 
 
 
