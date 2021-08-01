@@ -20,6 +20,7 @@ namespace JiraProject.Entities.Entities
         public Task():base()
         {
             this.TaskChanges = new List<TaskChange>();
+            this.Status = TaskStatus.ToDo;
         }
     }
 }

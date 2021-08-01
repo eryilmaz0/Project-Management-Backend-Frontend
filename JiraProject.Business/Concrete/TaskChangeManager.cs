@@ -50,8 +50,8 @@ namespace JiraProject.Business.Concrete
                 return new SuccessDataResult<ICollection<TaskChangeListResponse>>(taskChangesFromCache);
             }
 
-            var taskChanges = _taskChangeRepository.GetAll(x => x.TaskId == taskId, x => x.User);
-            var mappedTaskChanges = _mapper.Map<ICollection<TaskChangeListResponse>>(taskChanges);
+            var taskChanges = _taskChangeRepository.GetAll(x => x.TaskId == taskId, x => x.User).OrderByDescending(x=>x.Created);
+            var mappedTaskChanges = _mapper.Map<List<TaskChangeListResponse>>(taskChanges);
 
             _cacheManager.Add($"task:{taskId}/changes", mappedTaskChanges, 60);
             return new SuccessDataResult<ICollection<TaskChangeListResponse>>(mappedTaskChanges);

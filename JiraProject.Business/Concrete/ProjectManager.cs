@@ -7,10 +7,12 @@ using FluentValidation;
 using JiraProject.Business.Abstract;
 using JiraProject.Business.BusinessResultObjects;
 using JiraProject.DataAccess.Abstract;
+using JiraProject.DataAccess.Concrete.EntityFramework;
 using JiraProject.Entities.DataTransferObjects.Request;
 using JiraProject.Entities.DataTransferObjects.Response;
 using JiraProject.Entities.DbContext;
 using JiraProject.Entities.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace JiraProject.Business.Concrete
 {
@@ -22,7 +24,6 @@ namespace JiraProject.Business.Concrete
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
         private readonly ICacheService _cacheManager;
-
 
 
         public ProjectManager(IProjectRepository projectRepository, IDepartmentService departmentService, IAuthService authService, 
@@ -42,6 +43,12 @@ namespace JiraProject.Business.Concrete
 
         public IBusinessDataResult<ICollection<ProjectListResponse>> GetProjectsByDepartment(int departmentId)
         {
+
+            if (!_departmentService.IsDepartmentExist(departmentId).IsSuccess)
+            {
+                return new ErrorDataResult<ICollection<ProjectListResponse>>("Departman Bulunamadı.");
+            }
+
             var projectsByDepartment = _projectRepository.GetAll(x => x.DepartmentId == departmentId, 
                                         x => x.ProjectLeader, x => x.Department, x=>x.Members, x=>x.Tasks).ToList();
 
@@ -50,6 +57,26 @@ namespace JiraProject.Business.Concrete
         }
 
 
+
+        public IBusinessDataResult<ICollection<ProjectListResponse>> GetProjects()
+        {
+            var projectsByDepartment = _projectRepository.GetAll(null, x => x.ProjectLeader, x => x.Department, x => x.Members, x => x.Tasks).OrderByDescending(x=>x.Created).ToList();
+
+            var mappedProjects = _mapper.Map<List<ProjectListResponse>>(projectsByDepartment);
+            return new SuccessDataResult<ICollection<ProjectListResponse>>(mappedProjects);
+        }
+
+
+
+
+        public IBusinessDataResult<ICollection<ProjectListResponse>> GetProjectsByFilter(string filter)
+        {
+            var projectsByDepartment = _projectRepository.GetAll(x=>x.ProjectName.ToLower().Contains(filter.ToLower())
+                                    || x.ProjectDescription.ToLower().Contains(filter.ToLower()), x => x.ProjectLeader, x => x.Department, x => x.Members, x => x.Tasks).ToList();
+
+            var mappedProjects = _mapper.Map<List<ProjectListResponse>>(projectsByDepartment);
+            return new SuccessDataResult<ICollection<ProjectListResponse>>(mappedProjects);
+        }
 
 
 
@@ -110,7 +137,7 @@ namespace JiraProject.Business.Concrete
                 return new ErrorResult("Proje Bulunamadı.");
             }
 
-            if (!_departmentService.IsDepartmentExist(project.DepartmentId).IsSuccess)
+            if (!_departmentService.IsDepartmentExist(request.DepartmentId).IsSuccess)
             {
                 return new ErrorResult("Departman Bulunamadı.");
             }
@@ -355,7 +382,7 @@ namespace JiraProject.Business.Concrete
 
         public IBusinessResult UserIsMemberOfProject(User user, int projectId)
         {
-            var projectMembers = GetProjectMembers(projectId).Data;
+            var projectMembers = _projectRepository.Get(x => x.Id == projectId, x => x.Members).Members;
 
             if (projectMembers.FirstOrDefault(x => x.Id == user.Id) == null)
             {
@@ -372,6 +399,8 @@ namespace JiraProject.Business.Concrete
         {
             return new SuccessDataResult<ICollection<UserListResponse>>(_userService.GetUsersOutOfTheProject(projectId).Data);
         }
+
+
 
 
     }

@@ -38,10 +38,39 @@ namespace JiraProject.API.Controllers
                 return Ok(result);
             }
 
-            return BadRequest("Projeler Listelenemedi.");
+            return BadRequest(result.Message);
         }
 
 
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetAllProjects()
+        {
+            var result = _projectService.GetProjects();
+
+            if (result.IsSuccess)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+
+        [HttpGet]
+        [Route("Filter/{filter}")]
+        [Authorize]
+        public IActionResult GetProjectsByFilter(string filter)
+        {
+            var result = _projectService.GetProjectsByFilter(filter);
+
+            if (result.IsSuccess)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
 
 
         [HttpGet]
@@ -201,6 +230,8 @@ namespace JiraProject.API.Controllers
 
             return BadRequest(result);
         }
+
+
 
     }
 }

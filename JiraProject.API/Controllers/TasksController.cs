@@ -41,6 +41,21 @@ namespace JiraProject.API.Controllers
         }
 
 
+        [HttpGet]
+        [Route("{taskId:int}")]
+        [Authorize]
+        public IActionResult GetTaskById(int taskId)
+        {
+            var result = _taskService.GetTaskById(taskId);
+
+            if (result.IsSuccess)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
 
 
         [HttpGet]

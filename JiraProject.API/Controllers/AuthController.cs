@@ -32,10 +32,6 @@ namespace JiraProject.API.Controllers
         [ValidationFilter]
         public IActionResult Login(LoginRequest loginRequest)
         {
-            //IValidator validator = new LoginRequestValidator();
-            //var context = new ValidationContext<LoginRequest>(loginRequest);
-            //var result2 = validator.Validate(context);
-
             var result = _authService.Login(loginRequest);
 
             if (result.IsSuccess)

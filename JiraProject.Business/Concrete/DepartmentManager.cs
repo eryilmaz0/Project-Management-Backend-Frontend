@@ -1,6 +1,9 @@
-﻿using JiraProject.Business.Abstract;
+﻿using System.Collections.Generic;
+using AutoMapper;
+using JiraProject.Business.Abstract;
 using JiraProject.Business.BusinessResultObjects;
 using JiraProject.DataAccess.Abstract;
+using JiraProject.Entities.DataTransferObjects.Dto;
 
 namespace JiraProject.Business.Concrete
 {
@@ -8,11 +11,13 @@ namespace JiraProject.Business.Concrete
     {
 
         private readonly IDepartmentRepository _departmentRepository;
+        private readonly IMapper _mapper;
 
 
-        public DepartmentManager(IDepartmentRepository departmentRepository)
+        public DepartmentManager(IDepartmentRepository departmentRepository, IMapper mapper)
         {
             _departmentRepository = departmentRepository;
+            _mapper = mapper;
         }
 
 
@@ -27,6 +32,17 @@ namespace JiraProject.Business.Concrete
             }
 
             return new SuccessResult();
+        }
+
+
+
+
+        public IBusinessDataResult<ICollection<DepartmentListDto>> GetDepartments()
+        {
+            var departments = _departmentRepository.GetAll(includes: x => x.Projects);
+            var mappedDepartments = _mapper.Map<List<DepartmentListDto>>(departments);
+
+            return new SuccessDataResult<ICollection<DepartmentListDto>>(mappedDepartments);
         }
     }
 }

@@ -9,6 +9,5 @@ namespace JiraProject.Entities.DataTransferObjects.Request
         public string ProjectDescription { get; set; }
         public int DepartmentId { get; set; }
         public int ProjectLeaderId { get; set; }
-        public DateTime Created { get; set; }
     }
 }

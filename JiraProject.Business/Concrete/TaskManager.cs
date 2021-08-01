@@ -58,7 +58,7 @@ namespace JiraProject.Business.Concrete
 
         public IBusinessDataResult<Task> GetTaskById(int taskId)
         {
-            var task = _taskRepository.Get(x => x.Id == taskId);
+            var task = _taskRepository.Get(x => x.Id == taskId, includes: x=>x.User);
 
             if (task == null)
             {
@@ -160,7 +160,7 @@ namespace JiraProject.Business.Concrete
 
             if (authenticatedUser.Id != task.Project.ProjectLeaderId && authenticatedUser.Id != task.AssignedUserId)
             {
-                return new ErrorResult("Bu Görevi Düzenleme Yetkiniz Yok.");
+                return new ErrorResult("Size Atanmamış Bir Görevi Düzenleyemezsiniz.");
             }
 
 

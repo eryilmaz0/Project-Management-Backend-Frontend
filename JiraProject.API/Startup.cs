@@ -27,6 +27,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using ITaskChangeRepository = JiraProject.DataAccess.Abstract.ITaskChangeRepository;
 
 
@@ -52,6 +53,12 @@ namespace JiraProject.API
                     //AUTO VALIDATION DISABLED
                     options.SuppressModelStateInvalidFilter = true;
                 })
+                .AddNewtonsoftJson(o =>
+                {
+                    //INCLUDE
+                    o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                })
+
                 .AddFluentValidation(opt =>
                 {
                     opt.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>();
@@ -119,11 +126,26 @@ namespace JiraProject.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "JiraProject.API", Version = "v1" });
             });
+
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("_myAllowSpecificOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .SetIsOriginAllowed((x) => true);
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("_myAllowSpecificOrigins");
+
 
             if (env.IsDevelopment())
             {

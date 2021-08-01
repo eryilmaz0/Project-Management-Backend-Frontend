@@ -55,6 +55,9 @@ namespace JiraProject.Business.MapperProfile.AutoMapper
             CreateMap<TaskChange, TaskChangeListResponse>()
                 .ForMember(x=>x.User, opt => opt.MapFrom(x=> new UserDto(x.UserId, x.User.Name, x.User.LastName, x.User.Picture)));
 
+
+            CreateMap<Department, DepartmentListDto>().ForMember(x=>x.ProjectCount, opt => opt.MapFrom(x=>x.Projects.Count));
+
         }
     }
 }
