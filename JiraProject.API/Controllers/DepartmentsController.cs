@@ -22,7 +22,6 @@ namespace JiraProject.API.Controllers
 
 
         [HttpGet]
-        [Authorize]
         public IActionResult GetDepartments()
         {
             var result = _departmentService.GetDepartments();
